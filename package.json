@@ -5,16 +5,23 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "webpack-watch": "webpack -w",
+    "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kane Baccigalupi",
   "license": "MIT",
   "devDependencies": {
+    "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.24.1"
+    "babel-register": "^6.24.1",
+    "concurrently": "^3.4.0",
+    "webpack": "^2.6.0"
   },
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   }
 }
