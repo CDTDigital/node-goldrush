@@ -7,4 +7,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('root-beer'));
+ReactDOM.render(<App/>, document.getElementById('app'));

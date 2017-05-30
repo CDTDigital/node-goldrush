@@ -641,11 +641,10 @@ body {
   overflow: hidden;
   *overflow: visible;
   *zoom: 1;
-  width: 100%;
-  background-color: #fff;
-  -webkit-box-shadow: #000 0 0 5px;
-  -moz-box-shadow: #000 0 0 5px;
-  box-shadow: #000 0 0 5px; }
+  background-color: #fff; }
+
+.content {
+  min-height: 500px; }
 
 #header {
   background-color: #164675;
@@ -676,11 +675,7 @@ body {
   h6 {
     font-size: 13.5px; }
   #page {
-    max-width: 600px;
-    margin: 0 auto;
-    -webkit-box-shadow: #000 0 0 10px;
-    -moz-box-shadow: #000 0 0 10px;
-    box-shadow: #000 0 0 10px; }
+    margin: 0 auto; }
   #header .inner {
     padding-top: 10px;
     padding-bottom: 10px; }
