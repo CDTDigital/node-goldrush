@@ -7,6 +7,11 @@ const server  = express();
 
 const layout  = fs.readFileSync(__dirname + '/server/templates/layout.html').toString();
 
+const env     = require('./server/config/env.js');
+
+server.port = env.port;
+server.environment  = env.env;
+
 server.use(express.static('public'));
 server.get('/', (req, res) => {
   res.send(layout);

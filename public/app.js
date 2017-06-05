@@ -9539,19 +9539,46 @@ var App = function (_React$Component) {
 
   _createClass(App, [{
     key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'h1',
-        null,
-        'Hello React'
-      );
-    }
+    value: function render() {}
   }]);
 
   return App;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+var AuthenticateLinks = function (_React$Component2) {
+  _inherits(AuthenticateLinks, _React$Component2);
+
+  function AuthenticateLinks() {
+    _classCallCheck(this, AuthenticateLinks);
+
+    return _possibleConstructorReturn(this, (AuthenticateLinks.__proto__ || Object.getPrototypeOf(AuthenticateLinks)).apply(this, arguments));
+  }
+
+  _createClass(AuthenticateLinks, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'p',
+        null,
+        _react2.default.createElement(
+          'a',
+          { href: '/sign-in' },
+          'Sign in'
+        ),
+        ' - or - ',
+        _react2.default.createElement(
+          'a',
+          { href: '/create-account' },
+          'create an account'
+        )
+      );
+    }
+  }]);
+
+  return AuthenticateLinks;
+}(_react2.default.Component);
+
+_reactDom2.default.render(_react2.default.createElement(AuthenticateLinks, null), document.getElementById('app'));
 
 /***/ }),
 /* 81 */

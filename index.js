@@ -1,8 +1,7 @@
 'use strict';
 
 const server = require('./server');
-const port   = process.env.PORT || 3000;
 
-server.listen(port, () => {
-  console.log('Listening on ' + port);
+server.listen(server.port, () => {
+  console.log('Starting server in ' + server.environment + ' mode: Listening on ' + server.port);
 });

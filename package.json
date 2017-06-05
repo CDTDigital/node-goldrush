@@ -7,7 +7,7 @@
     "start": "node index.js",
     "webpack-watch": "webpack -w",
     "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm start\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "APP_ENV=test node test/acceptance-runner.js"
   },
   "author": "Kane Baccigalupi",
   "license": "MIT",
@@ -19,11 +19,14 @@
     "compass-mixins": "^0.12.10",
     "concurrently": "^3.4.0",
     "css-loader": "^0.28.4",
+    "cssurf": "git+ssh://git@github.com/CDTDigital/cssurf.git",
     "extract-text-webpack-plugin": "^2.1.0",
+    "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
-    "webpack": "^2.6.0"
+    "webpack": "^2.6.0",
+    "zombie": "^5.0.5"
   },
   "dependencies": {
     "express": "^4.15.3",

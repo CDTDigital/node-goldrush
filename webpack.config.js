@@ -16,10 +16,6 @@ let config = {
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      //{
-        //test: /\.scss$/,
-        //loader: "style-loader!raw-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib")
-      //},
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
