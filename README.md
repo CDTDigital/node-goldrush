@@ -13,4 +13,8 @@ To setup your local environment copy the `.env.sample` file to `.env`:
 
     cp .env.sample .env
 
+## Start the app
 
+It is just an express app, and runs via a nmp script:
+
+    npm start
