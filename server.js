@@ -1,13 +1,20 @@
 'use strict';
 
-const fs      = require('fs');
+const env         = require('./server/config/env.js');
 
-const express = require('express');
-const server  = express();
+const fs          = require('fs');
+const express     = require('express');
+const bodyParser  = require('body-parser');
+const jwt         = require('jsonwebtoken');
+const passport    = require('passport');
+const jwtStrategy = require('./server/config/jwt-strategy');
 
-const layout  = fs.readFileSync(__dirname + '/server/templates/layout.html').toString();
+const layout      = fs.readFileSync(__dirname + '/server/templates/layout.html').toString();
+let   server      = express();
 
-const env     = require('./server/config/env.js');
+passport.use(jwtStrategy);
+server.use(passport.initialize());
+server.use(bodyParser.json());
 
 server.port = env.port;
 server.environment  = env.env;
