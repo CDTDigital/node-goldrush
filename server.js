@@ -24,4 +24,8 @@ server.get('/', (req, res) => {
   res.send(layout);
 });
 
+server.get('/protected', passport.authenticate('jwt', { session: false }), function(req, res){
+  res.json({hello: 'protected world'});
+});
+
 module.exports = server;
