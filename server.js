@@ -3,12 +3,13 @@
 const env         = require('./server/config/env.js');
 
 const fs          = require('fs');
+const path        = require('path');
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const passport    = require('passport');
 const jwtStrategy = require('./server/config/jwt-strategy').strategy;
 
-const layout      = fs.readFileSync(__dirname + '/server/templates/layout.html').toString();
+const layout      = fs.readFileSync(path.resolve(__dirname, 'server/templates/layout.html')).toString();
 let   server      = express();
 
 passport.use(jwtStrategy);
