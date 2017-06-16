@@ -18,3 +18,14 @@ To setup your local environment copy the `.env.sample` file to `.env`:
 It is just an express app, and runs via a nmp script:
 
     npm start
+
+## Testing
+
+Unit/integration tests are via [mocha](https://mochajs.org/). If using the `assert`
+module is too low level. Feel free to add in some `chai` and `sinon`.
+
+These tests can be run via an npm script:
+
+    `npm run test:server`
+
+

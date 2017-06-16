@@ -10,15 +10,27 @@ const jwtOptions = {
   secretOrKey:    process.env.JWT_SECRET
 };
 
-const authorizedUsers = JSON.parse(process.env.JWT_USERS);
+let authorizedUsers;
+try {
+  authorizedUsers = JSON.parse(process.env.JWT_USERS);
+} catch(e) {
+  console.log('Please set JTW_USERS as an environmental variable! Or change the strategy for setting acceptable jwt users.');
+  throw(e);
+}
 
 function findUser(jwtUsername) {
   return authorizedUsers.find((name) => {
-    return name === jwtUser;
+    return name === jwtUsername;
   }) || false;
 }
 
-module.exports = new JwtStrategy(jwtOptions, function(payload, next) {
+function authorizeApiUsage(payload, next) {
   let user = findUser(payload.user);
   next(null, user);
-});
+}
+
+module.exports = {
+  strategy:           new JwtStrategy(jwtOptions, authorizeApiUsage),
+  authorizeApiUsage:  authorizeApiUsage,
+  authorizedUsers:    authorizedUsers
+};

@@ -7,7 +7,7 @@ const express     = require('express');
 const bodyParser  = require('body-parser');
 const jwt         = require('jsonwebtoken');
 const passport    = require('passport');
-const jwtStrategy = require('./server/config/jwt-strategy');
+const jwtStrategy = require('./server/config/jwt-strategy').strategy;
 
 const layout      = fs.readFileSync(__dirname + '/server/templates/layout.html').toString();
 let   server      = express();

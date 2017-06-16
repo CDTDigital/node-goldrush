@@ -7,7 +7,8 @@
     "start": "node index.js",
     "webpack-watch": "webpack -w",
     "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm start\"",
-    "test": "APP_ENV=test node test/acceptance-runner.js"
+    "test": "npm run test:server",
+    "test:server": "node_modules/.bin/mocha --recursive test/server"
   },
   "author": "Kane Baccigalupi",
   "license": "MIT",
@@ -16,11 +17,13 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.24.1",
+    "chai": "^4.0.2",
     "compass-mixins": "^0.12.10",
     "concurrently": "^3.4.0",
     "css-loader": "^0.28.4",
     "cssurf": "git+ssh://git@github.com/CDTDigital/cssurf.git",
     "extract-text-webpack-plugin": "^2.1.0",
+    "jshint": "^2.9.4",
     "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.5",
