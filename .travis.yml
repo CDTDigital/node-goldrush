@@ -6,3 +6,7 @@ cache:
     - "node_modules"
 env:
   - JWT_SECRET=s3kret
+script:
+  - npm run test:coverage
+after_script:
+  codeclimate-test-reporter < lcov.info
