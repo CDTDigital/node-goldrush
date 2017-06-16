@@ -8,7 +8,8 @@
     "webpack-watch": "webpack -w",
     "dev": "concurrently --kill-others \"npm run webpack-watch\" \"npm start\"",
     "test": "npm run test:server",
-    "test:server": "node_modules/.bin/mocha --recursive test/server"
+    "test:server": "node_modules/.bin/mocha --recursive test/server",
+    "lint": "node_modules/.bin/jshint test/ server/ server.js index.js"
   },
   "author": "Kane Baccigalupi",
   "license": "MIT",

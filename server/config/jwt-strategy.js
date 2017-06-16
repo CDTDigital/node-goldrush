@@ -1,6 +1,6 @@
 'use strict';
 
-const passportJWT = require("passport-jwt");
+const passportJWT = require('passport-jwt');
 
 const ExtractJwt  = passportJWT.ExtractJwt;
 const JwtStrategy = passportJWT.Strategy;

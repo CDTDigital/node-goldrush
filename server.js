@@ -5,7 +5,6 @@ const env         = require('./server/config/env.js');
 const fs          = require('fs');
 const express     = require('express');
 const bodyParser  = require('body-parser');
-const jwt         = require('jsonwebtoken');
 const passport    = require('passport');
 const jwtStrategy = require('./server/config/jwt-strategy').strategy;
 
@@ -24,7 +23,7 @@ server.get('/', (req, res) => {
   res.send(layout);
 });
 
-let authenticate = passport.authenticate('jwt', { session: false })
+let authenticate = passport.authenticate('jwt', { session: false });
 
 server.get('/protected', authenticate, function(req, res){
   res.json({hello: 'protected world'});

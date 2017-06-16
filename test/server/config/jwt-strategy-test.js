@@ -2,7 +2,6 @@
 
 const env = require('../../support/env');
 
-const assert = require('assert');
 const expect = require('chai').expect;
 const jwtStrategy = require(env.serverDir + '/config/jwt-strategy');
 
