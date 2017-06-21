@@ -10,6 +10,8 @@ const jwtOptions = {
   secretOrKey:    process.env.JWT_SECRET
 };
 
+// NOTE: this doesn't work yet in many environments, depending on how the envar is set.
+// Either switch to a dynamic feature driven auth system, or something else???
 let authorizedUsers;
 try {
   authorizedUsers = JSON.parse(process.env.JWT_USERS);
