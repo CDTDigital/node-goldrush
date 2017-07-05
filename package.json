@@ -10,6 +10,7 @@
     "test": "npm run test:server",
     "test:server": "node_modules/.bin/mocha --recursive test/server",
     "test:coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --recursive test/server",
+    "test:security": "node_modules/.bin/nsp check",
     "lint": "node_modules/.bin/jshint test/ server/ server.js index.js"
   },
   "author": "Kane Baccigalupi",
@@ -29,6 +30,7 @@
     "jshint": "^2.9.4",
     "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
+    "nsp": "^2.6.3",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.1",
     "webpack": "^2.6.0",
@@ -38,6 +40,7 @@
     "body-parser": "^1.17.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "helmet": "^3.6.1",
     "jsonwebtoken": "^7.4.1",
     "morgan": "^1.8.2",
     "passport": "^0.3.2",
