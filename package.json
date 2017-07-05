@@ -1,7 +1,7 @@
 {
-  "name": "substrate",
+  "name": "node-goldrush",
   "version": "0.1.0",
-  "description": "Node express plus React and state styles",
+  "description": "Get up and running with Node.js express plus React and state styles",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
